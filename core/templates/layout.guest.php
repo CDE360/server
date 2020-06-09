@@ -30,14 +30,14 @@
 		<?php }?>
 		<div class="wrapper">
 			<div class="v-align">
-				<?php if ($_['bodyid'] === 'body-login'): ?>
+				<?php if ($_['bodyid'] === 'body-login' ): ?>
 					<header role="banner">
 						<div id="header">
 							<div class="logo">
 								<h1 class="hidden-visually">
 									<?php p($theme->getName()); ?>
 								</h1>
-								<?php if (\OC::$server->getConfig()->getSystemValue('installed', false)
+								<?php if(\OC::$server->getConfig()->getSystemValue('installed', false)
 									&& \OC::$server->getConfig()->getAppValue('theming', 'logoMime', false)): ?>
 									<img src="<?php p($theme->getLogo()); ?>"/>
 								<?php endif; ?>
@@ -51,9 +51,13 @@
 			</div>
 		</div>
 		<footer role="contentinfo">
-			<p class="info">
+			<!-- <p class="info">
 				<?php print_unescaped($theme->getLongFooter()); ?>
-			</p>
+			</p> -->
 		</footer>
+		<div style="background: #ffce3a; width: 100%; padding: 10px 0; font-size: 20px;">
+				
+			<?php	p($l->t("Terms and conditions Privacy Policy © Copyright 2020 cde360.io All rights reserved.")); ?>
+		</div>
 	</body>
 </html>

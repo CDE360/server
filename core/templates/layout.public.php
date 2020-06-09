@@ -31,49 +31,42 @@
 <?php foreach ($_['initialStates'] as $app => $initialState) { ?>
 	<input type="hidden" id="initial-state-<?php p($app); ?>" value="<?php p(base64_encode($initialState)); ?>">
 <?php }?>
-	<div id="notification-container">
+	<!-- <div id="notification-container">
 		<div id="notification"></div>
-	</div>
+	</div> -->
 	<header id="header">
 		<div class="header-left">
 			<span id="nextcloud">
 				<div class="logo logo-icon svg"></div>
 				<h1 class="header-appname">
-					<?php if (isset($template) && $template->getHeaderTitle() !== '') {
-						p($template->getHeaderTitle());
-					} else {
-						p($theme->getName());
-					} ?>
+					<?php if (isset($template)) { p($template->getHeaderTitle()); } else { p($theme->getName());} ?>
 				</h1>
-				<?php if (isset($template) && $template->getHeaderDetails() !== '') { ?>
 				<div class="header-shared-by">
-					<?php p($template->getHeaderDetails()); ?>
+					<?php if (isset($template)) { p($template->getHeaderDetails()); } ?>
 				</div>
-				<?php } ?>
 			</span>
 		</div>
 
 		<?php
 		/** @var \OCP\AppFramework\Http\Template\PublicTemplateResponse $template */
-		if (isset($template) && $template->getActionCount() !== 0) {
+		if(isset($template) && $template->getActionCount() !== 0) {
 			$primary = $template->getPrimaryAction();
-			$others = $template->getOtherActions(); ?>
+			$others = $template->getOtherActions();
+			?>
 		<div class="header-right">
-			<span id="header-primary-action" class="<?php if ($template->getActionCount() === 1) {
-				p($primary->getIcon());
-			} ?>">
+			<span id="header-primary-action" class="<?php if($template->getActionCount() === 1) {  p($primary->getIcon()); } ?>">
 				<a href="<?php p($primary->getLink()); ?>" class="primary button">
 					<span><?php p($primary->getLabel()) ?></span>
 				</a>
 			</span>
-			<?php if ($template->getActionCount() > 1) { ?>
+			<?php if($template->getActionCount() > 1) { ?>
 			<div id="header-secondary-action">
 				<button id="header-actions-toggle" class="menutoggle icon-more-white"></button>
 				<div id="header-actions-menu" class="popovermenu menu">
 					<ul>
 						<?php
 							/** @var \OCP\AppFramework\Http\Template\IMenuAction $action */
-							foreach ($others as $action) {
+							foreach($others as $action) {
 								print_unescaped($action->render());
 							}
 						?>
@@ -82,20 +75,19 @@
 			</div>
 			<?php } ?>
 		</div>
-		<?php
-		} ?>
+		<?php } ?>
 	</header>
 	<div id="content" class="app-<?php p($_['appid']) ?>" role="main">
 		<?php print_unescaped($_['content']); ?>
 	</div>
-	<?php if (isset($template) && $template->getFooterVisible()) { ?>
+	<?php if(isset($template) && $template->getFooterVisible()) { ?>
 	<footer>
 		<p><?php print_unescaped($theme->getLongFooter()); ?></p>
 		<?php
 		if ($_['showSimpleSignUpLink']) {
 			?>
 			<p>
-				<a href="https://nextcloud.com/signup/" target="_blank" rel="noreferrer noopener">
+				<a href="https://cde360.io/apps/registration/" target="_blank" rel="noreferrer noopener">
 					<?php p($l->t('Get your own free account')); ?>
 				</a>
 			</p>
