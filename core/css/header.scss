@@ -169,6 +169,10 @@
 				}
 			}
 		}
+
+		li[data-id="firstrunwizard-about"] {
+			display: none !important;
+		}
 	}
 	.logo {
 		display: inline-flex;
