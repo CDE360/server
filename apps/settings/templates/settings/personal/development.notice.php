@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section" style="display: none;">
 	<p>
 		<?php print_unescaped(str_replace(
 			[

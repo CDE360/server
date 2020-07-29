@@ -168,6 +168,10 @@
 					}
 				}
 			}
+
+			li[data-id="firstrunwizard-about"] {
+				display: none !important;
+			}
 		}
 
 		li[data-id="firstrunwizard-about"] {
