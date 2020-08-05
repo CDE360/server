@@ -159,7 +159,7 @@ OC.L10N.register(
     "Restrict users to only share with users in their groups" : "Ierobežot lietotājiem koplietot tikai ar lietotājiem savās grupās",
     "Exclude groups from sharing" : "Izslēgt grupas no koplietošanas",
     "Personal" : "Personīgs",
-    "Developed by the {communityopen}Nextcloud community{linkclose}, the {githubopen}source code{linkclose} is licensed under the {licenseopen}AGPL{linkclose}." : "Izstrādātās {communityopen}Nextcloud kopiena {linkclose},  {githubopen} avota kods {linkclose} licencēts saskaņā ar {licenseopen}AGPL{linkclose}.",
+    "Developed by the {communityopen}Nextcloud community{linkclose}, the {githubopen}source code{linkclose} is licensed under the {licenseopen}AGPL{linkclose}." : "Izstrādātās {communityopen}CDE360 kopiena {linkclose},  {githubopen} avota kods {linkclose} licencēts saskaņā ar {licenseopen}AGPL{linkclose}.",
     "Profile picture" : "Profila attēls",
     "Upload new" : "Ielādēt jaunu",
     "Select from Files" : "Izvēlēties no Datnes",

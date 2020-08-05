@@ -96,7 +96,7 @@ OC.L10N.register(
     "Delete" : "Kustuta",
     "Unlimited" : "Piiramatult",
     "Verifying" : "Kontrollin",
-    "Nextcloud settings" : "Nextcloud seaded",
+    "Nextcloud settings" : "CDE360 seaded",
     "Limit to groups" : "Luba gruppidele",
     "Save changes" : "Salvesta muudatused",
     "Featured" : "Esile tõstetud",
