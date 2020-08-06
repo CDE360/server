@@ -696,17 +696,17 @@ class ThemingDefaultsTest extends TestCase {
 		$this->config
 			->expects($this->once())
 			->method('getAppValue')
-			->with('theming', 'AndroidClientUrl', 'https://play.google.com/store/apps/details?id=com.nextcloud.client')
-			->willReturn('https://play.google.com/store/apps/details?id=com.nextcloud.client');
+			->with('theming', 'AndroidClientUrl', 'https://play.google.com/store/apps/details?id=com.cde360.client')
+			->willReturn('https://play.google.com/store/apps/details?id=com.cde360.client');
 
-		$this->assertEquals('https://play.google.com/store/apps/details?id=com.nextcloud.client', $this->template->getAndroidClientUrl());
+		$this->assertEquals('https://play.google.com/store/apps/details?id=com.cde360.client', $this->template->getAndroidClientUrl());
 	}
 
 	public function testGetCustomAndroidURL() {
 		$this->config
 			->expects($this->once())
 			->method('getAppValue')
-			->with('theming', 'AndroidClientUrl', 'https://play.google.com/store/apps/details?id=com.nextcloud.client')
+			->with('theming', 'AndroidClientUrl', 'https://play.google.com/store/apps/details?id=com.cde360.client')
 			->willReturn('https://play.google.com/store/apps/details?id=com.mycloud.client');
 
 		$this->assertEquals('https://play.google.com/store/apps/details?id=com.mycloud.client', $this->template->getAndroidClientUrl());
